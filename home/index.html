@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
+    <link rel="stylesheet" href="style.css">
+    <title>Karasuno</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo do Time Karasuno"> <!-- Logo do time -->
+        </div>
+        <h1>Karasuno</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li> <!-- Link para a página inicial -->
+                <li><a href="campeonatos.html">Campeonatos</a></li> <!-- Link para a página de campeonatos -->
+                <li><a href="jogadores.html">Jogadores</a></li> <!-- Link para a página de jogadores -->
+                <li><a href="contato.html">Contato</a></li> <!-- Link para a página de contato -->
+                <li><a href="historia.html">História</a></li> <!-- Link para uma página de história -->
+            </ul>
+        </nav>
+        <input type="text" placeholder="Buscar..." aria-label="Campo de busca"> <!-- Campo de busca -->
+    </header>
+
+    <main>
+        <!-- Seção do banner interativo -->
+        <section class="banner" onclick="toggleBanner()">
+            <img src="images/banner1.jpg" alt="Imagem do Time Karasuno" class="banner-image"> <!-- Imagem do banner -->
+            <div class="banner-content">
+                <h2 id="banner-title">Bem-vindo ao time de vôlei de Karasuno!</h2>
+                <p id="banner-text" style="display: none;"> <!-- Texto oculto até o clique -->
+                    O Karasuno é um time de vôlei que busca se destacar em competições e mostrar sua determinação e espírito de equipe.
+                    <br>
+                </p>
+                <span>Clique aqui para saber mais</span>
+            </div>
+        </section>
+
+        <!-- Seção sobre Campeonatos -->
+        <section class="intro" id="campeonatos">
+            <h2>Últimos campeonatos</h2>
+            <ul>
+                <li><strong>Intercolegial Regional:</strong> Quartas de final</li>
+                <li><strong>Torneio Nacional:</strong> Quartas de final</li>
+                <li><strong>Campeonato de Primavera:</strong> Semifinais</li>
+            </ul>
+            <p>Com a chegada de novos jogadores talentosos, o Karasuno vem se destacando novamente nas competições e busca conquistar novos títulos. Acompanhe os próximos campeonatos e torça pela equipe!</p>
+        </section>
+
+        <!-- Seção de carousel para Jogadores em Destaque -->
+        <section class="carousel">
+            <h2>Jogadores em destaque</h2>
+            <div class="carousel-container" id="carousel1">
+                <div class="carousel-item active">
+                    <img src="images/daichi.png" alt="Jogador 1">
+                    <p>Daichi Sawamura<br>Capitão/Oposto</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/suga.jpeg" alt="Jogador 2">
+                    <p>Kōshi Sugawara<br>Vice-Capitão/Levantador</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/asashi.jpg" alt="Jogador 3">
+                    <p>Asahi Azumane<br>Ponteiro</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/nishi.jpg" alt="Jogador 4">
+                    <p>Yū Nishinoya<br>Líbero</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/tanaka.jpg" alt="Jogador 5">
+                    <p>Ryūnosuke Tanaka<br>Ponteiro</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/Chikara Ennoshita.jpg" alt="Jogador 6">
+                    <p>Chikara Ennoshita<br>Ponteiro</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/Kei Tsukishima.png" alt="Jogador 7">
+                    <p>Kei Tsukishima<br>Central</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/Tadashi Yamaguchi.jpeg" alt="Jogador 8">
+                    <p>Tadashi Yamaguchi<br>Central</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/Shōyō Hinata.jpeg" alt="Jogador 9">
+                    <p>Shōyō Hinata<br>Central/Pivô</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/Tobio Kageyama.jpeg" alt="Jogador 10">
+                    <p>Tobio Kageyama<br>Levantador</p>
+                </div>
+                <button class="prev" onclick="changeSlide(-1, 'carousel1')" aria-label="Slide anterior">&#10094;</button>
+                <button class="next" onclick="changeSlide(1, 'carousel1')" aria-label="Próximo slide">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Seção de Últimos Jogos -->
+        <section class="carousel">
+            <h2>Últimos Jogos</h2>
+            <div class="carousel-container" id="carousel2">
+                <div class="carousel-item active">
+                    <img src="images/jogo1.jpg" alt="Jogo 1">
+                    <p>Karasuno vs Aoba Johsai<br>3-2</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/jogo3.png" alt="Jogo 2">
+                    <p>Karasuno vs Nekoma<br>2-3</p>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/jogo2.png" alt="Jogo 3">
+                    <p>Karasuno vs Date Tech<br>3-0</p>
+                </div>
+                <button class="prev" onclick="changeSlide(-1, 'carousel2')" aria-label="Slide anterior">&#10094;</button>
+                <button class="next" onclick="changeSlide(1, 'carousel2')" aria-label="Próximo slide">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Seção para inscrição na newsletter -->
+        <section class="newsletter">
+            <h2>Inscreva-se na nossa Newsletter</h2>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Digite seu email" required aria-label="Email para a newsletter">
+                <button type="submit">Inscrever-se</button>
+            </form>
+            <p id="success-message" style="display:none;">Inscrição realizada com sucesso! Obrigado!</p> <!-- Mensagem de sucesso -->
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/logo.png" alt="Logo do Time Karasuno"> <!-- Logo do time no rodapé -->
+                <span>Karasuno</span> <!-- Nome do site -->
+            </div>
+            <p>&copy; 2024 Karasuno | Criado por <strong>Haruichi Furudate</strong></p> <!-- Nome do site -->
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script> <!-- Script JavaScript -->
+</body>
+</html>
